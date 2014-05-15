@@ -14,3 +14,7 @@ $ ionic emulate ios
 ```
 
 Feel free to use this README for adding any project goals. This will be a living document during development.
+
+## Resource List
+
+- [Ionic Docs](http://ionicframework.com/docs/)
