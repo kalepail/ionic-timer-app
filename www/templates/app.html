@@ -1,7 +1,21 @@
 <ion-view title="Home">
   <ion-content class="has-header padding">
-    <h1>Awesome Timer</h1>
-    
-    <!-- All your HTML can go here for now. -->
+  
+   <section id="clock-timer">
+       <h3>
+           Timer with hours, minutes &amp; seconds</h3>
+   
+       <div class="bs-docs-example">
+           <p>
+               This markup <code ng-non-bindable="">&lt;timer interval=&quot;1000&quot;&gt;{{hours}} hours, {{minutes}}
+               minutes, {{seconds}} seconds.&lt;/timer&gt;</code> will run the clock timer ticking every second</p>
+   
+           <h3>
+               <timer interval="1000">{{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer>
+           </h3>
+           <button class="btn" onclick="stopResumeTimer('clock-timer', this)" type="button">Stop</button>
+       </div>
+   </section>
+  
   </ion-content>
 </ion-view>
