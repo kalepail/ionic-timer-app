@@ -9,26 +9,26 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
+    <script src="js/timer.js"></script>
+    
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
-    <!--<script src="js/app.js"></script>-->
-    <!--<script src="js/controllers.js"></script>-->
-    <script src="js/docs.js"></script>
-    <script src="js/timer.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/actions.js"></script>
   </head>
   
-  <body ng-app="navy-timer" ng-controller="TimerController" animation="slide-left-right-ios7">
+  <body ng-app="navy-timer" animation="slide-left-right-ios7">
     
-    <section id="clock-timer">
-      <h3>
-        <timer interval="1000">{{hours}} hours<br />{{minutes}} minutes<br />{{seconds}} seconds</timer>
-      </h3>
-      
-      <button class="btn" onclick="stopResumeTimer('clock-timer', this)" type="button">Stop</button>
-    </section>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-icon icon ion-chevron-left">
+        Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view name="template"></ion-nav-view>
     
   </body>
 </html>
