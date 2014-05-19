@@ -1,5 +1,5 @@
-angular.module('starter.controllers', [])
+angular.module('controllers', [])
 
 .controller('AppCtrl', function() {
-  timer();
+  
 });
