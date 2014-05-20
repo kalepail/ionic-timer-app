@@ -6426,23 +6426,28 @@ a.button {
   -webkit-transition: none !important;
   transition: none !important; }
 
+input, button {
+  border-radius: 4px;
+  height: 42px !important;
+  -webkit-appearance: none; }
+
 #goal input[type="text"] {
   border: 1px solid lightgray;
   padding: 0 1em;
   box-sizing: border-box;
   margin-bottom: 1em; }
 
-section {
-  margin: 2em 0; }
-  section:first-child {
-    margin-top: 0; }
-  section:last-child {
-    margin-bottom: 0; }
+section:first-child {
+  margin-top: 0; }
+section:last-child {
+  margin-bottom: 0; }
 
 .progress-bar {
   background: lightgray;
-  height: 50px;
-  margin-bottom: 1em; }
+  height: 42px;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  overflow: hidden; }
 
 .progress {
   background: gray;
@@ -6450,14 +6455,13 @@ section {
   max-width: 100% !important; }
 
 button, input[type="submit"] {
-  -webkit-appearance: none;
   border: none;
   color: #fff;
   width: 100%;
   line-height: 2em; }
 
-.stop {
-  background-color: #ef4e3a; }
+.pause {
+  background-color: #f0b840; }
 
-.start, input[type="submit"] {
+.resume, input[type="submit"] {
   background-color: #66cc33; }

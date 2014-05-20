@@ -1,3 +1,9 @@
+input, button {
+  border-radius: 4px;
+  height: 42px !important;
+  -webkit-appearance: none;
+}
+
 #goal {
   input[type="text"] {
     border: 1px solid lightgray;
@@ -8,8 +14,6 @@
 }
 
 section {
-  margin: 2em 0;
-  
   &:first-child {
     margin-top: 0;
   }
@@ -19,8 +23,10 @@ section {
 }
 .progress-bar {
   background: lightgray;
-  height: 50px;
+  height: 42px;
   margin-bottom: 1em;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .progress {
   background: gray;
@@ -28,15 +34,14 @@ section {
   max-width: 100% !important;
 }
 button, input[type="submit"] {
-  -webkit-appearance: none;
   border: none;
   color: $light;
   width: 100%;
   line-height: 2em;
 }
-.stop {
-  background-color: $assertive;
+.pause {
+  background-color: $energized;
 }
-.start, input[type="submit"] {
+.resume, input[type="submit"] {
   background-color: $balanced;
 }

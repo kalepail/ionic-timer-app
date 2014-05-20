@@ -1,8 +1,9 @@
 <ion-view title="Home">
   <ion-content class="has-header padding">
+    <h1>Set A Goal</h1>
     
     <form id="goal" ng-submit="submit()" ng-controller="GoalCtrl">
-      <input type="text" ng-model="text" name="goal" placeholder="set a goal (e.g. 950)" />
+      <input type="text" ng-model="text" name="goal" pattern="\d*" placeholder="set a goal (e.g. 950)" />
       <input type="submit" name="submit" value="Start" />
     </form>
   
