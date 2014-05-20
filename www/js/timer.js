@@ -11,7 +11,7 @@ angular.module('timer', [])
         autoStart: '&autoStart',
         maxTimeUnit: '='
       },
-      controller: ['$scope', '$element', '$attrs', '$timeout', function ($scope, $element, $attrs, $timeout) {
+      controller: ['$scope', '$element', '$attrs', '$timeout', '$stateParams', function ($scope, $element, $attrs, $timeout, $stateParams) {
 
         // Checking for trim function since IE8 doesn't have it
         // If not a function, create tirm with RegEx to mimic native trim
@@ -37,6 +37,7 @@ angular.module('timer', [])
         $scope.timeoutId = null;
         $scope.countdown = $scope.countdownattr && parseInt($scope.countdownattr, 10) >= 0 ? parseInt($scope.countdownattr, 10) : undefined;
         $scope.isRunning = false;
+        $scope.result = parseFloat($stateParams.goal*6);
 
         $scope.$on('timer-start', function () {
           $scope.start();

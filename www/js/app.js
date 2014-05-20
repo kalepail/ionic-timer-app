@@ -23,7 +23,16 @@ angular.module('navy-timer', ['ionic', 'timer', 'controllers'])
       views: {
         'template': {
           templateUrl: 'templates/app.html',
-          controller: 'AppCtrl'
+          controller: 'GoalCtrl'
+        }
+      }
+    })
+    .state('timer', {
+      url: '/timer?goal',
+      views: {
+        'template': {
+          templateUrl: 'templates/timer.html',
+          controller: 'TimerCtrl'
         }
       }
     })

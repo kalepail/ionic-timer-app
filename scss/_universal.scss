@@ -11,9 +11,19 @@ section {
 .progress-bar {
   background: lightgray;
   height: 50px;
+  margin-bottom: 1em;
 }
 .progress {
   background: gray;
   height: 100%;
   max-width: 100% !important;
+}
+
+#goal {
+  input[type="text"] {
+    border: 1px solid lightgray;
+    padding: 0 1em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+  }
 }

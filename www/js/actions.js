@@ -12,27 +12,25 @@ function addCDSeconds(sectionId, extraTime) {
 }
 
 function stopResumeTimer(sectionId, btn) {
+  
+  var items = document.getElementById(sectionId).getElementsByTagName('timer');
+  
   if (btn.innerHTML === 'Start') {
-    document.getElementById(sectionId).getElementsByTagName('timer')[0].start();
-    btn.innerHTML = 'Stop';
+    for (var i=0; i < items.length; i++) {
+      items[i].start();
+      btn.innerHTML = 'Stop';
+    }
   }
   else if (btn.innerHTML === 'Stop') {
-    document.getElementById(sectionId).getElementsByTagName('timer')[0].stop();
-    btn.innerHTML = 'Resume';
+    for (var i=0; i < items.length; i++) {
+      items[i].stop();
+      btn.innerHTML = 'Resume';
+    }
   }
   else {
-    document.getElementById(sectionId).getElementsByTagName('timer')[0].resume();
-    btn.innerHTML = 'Stop';
+    for (var i=0; i < items.length; i++) {
+      items[i].resume();
+      btn.innerHTML = 'Stop';
+    }
   }
 }
-
-angular.module('timer-demo',['timer']).controller('TimerDemoController',['$scope',  function ($scope) {
-    $scope.linkAnchors = function () {
-        $('ul.nav a').click(function (){
-            var path = $(this).attr('href');
-            if (path != '#') {
-                window.location = path;
-            }
-        });
-    };
-}]);
