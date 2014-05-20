@@ -1,4 +1,19 @@
-#clock-timer {
-  margin-top: 30px;
-  text-align: center;
+section {
+  margin: 2em 0;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.progress-bar {
+  background: lightgray;
+  height: 50px;
+}
+.progress {
+  background: gray;
+  height: 100%;
+  max-width: 100% !important;
 }

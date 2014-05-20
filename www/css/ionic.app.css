@@ -6415,6 +6415,18 @@ a.button {
   -webkit-transition: none !important;
   transition: none !important; }
 
-#clock-timer {
-  margin-top: 30px;
-  text-align: center; }
+section {
+  margin: 2em 0; }
+  section:first-child {
+    margin-top: 0; }
+  section:last-child {
+    margin-bottom: 0; }
+
+.progress-bar {
+  background: lightgray;
+  height: 50px; }
+
+.progress {
+  background: gray;
+  height: 100%;
+  max-width: 100% !important; }
