@@ -13,7 +13,7 @@
         </div>
       </timer>
       
-      <button onclick="stopResumeTimer('clock-timer', this)" type="button">Stop</button>
+      <button ng-class="class" ng-click="timerToggle('clock-timer', $event.target)" type="button">Stop</button>
     </section>
   </ion-content>
 </ion-view>

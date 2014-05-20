@@ -1,3 +1,14 @@
+/*
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+$dark:                            #444 !default;
+*/
 /*!
   Ionicons, v1.4.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -6415,6 +6426,12 @@ a.button {
   -webkit-transition: none !important;
   transition: none !important; }
 
+#goal input[type="text"] {
+  border: 1px solid lightgray;
+  padding: 0 1em;
+  box-sizing: border-box;
+  margin-bottom: 1em; }
+
 section {
   margin: 2em 0; }
   section:first-child {
@@ -6432,8 +6449,15 @@ section {
   height: 100%;
   max-width: 100% !important; }
 
-#goal input[type="text"] {
-  border: 1px solid lightgray;
-  padding: 0 1em;
-  box-sizing: border-box;
-  margin-bottom: 1em; }
+button, input[type="submit"] {
+  -webkit-appearance: none;
+  border: none;
+  color: #fff;
+  width: 100%;
+  line-height: 2em; }
+
+.stop {
+  background-color: #ef4e3a; }
+
+.start, input[type="submit"] {
+  background-color: #66cc33; }

@@ -1,3 +1,12 @@
+#goal {
+  input[type="text"] {
+    border: 1px solid lightgray;
+    padding: 0 1em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+  }
+}
+
 section {
   margin: 2em 0;
   
@@ -18,12 +27,16 @@ section {
   height: 100%;
   max-width: 100% !important;
 }
-
-#goal {
-  input[type="text"] {
-    border: 1px solid lightgray;
-    padding: 0 1em;
-    box-sizing: border-box;
-    margin-bottom: 1em;
-  }
+button, input[type="submit"] {
+  -webkit-appearance: none;
+  border: none;
+  color: $light;
+  width: 100%;
+  line-height: 2em;
+}
+.stop {
+  background-color: $assertive;
+}
+.start, input[type="submit"] {
+  background-color: $balanced;
 }
