@@ -1,11 +1,17 @@
 angular.module('controllers', [])
 
 // Homepage Set-A-Goal Controller
-.controller('GoalCtrl', function($scope, $ionicSideMenuDelegate, $ionicScrollDelegate) {
+.controller('GoalCtrl', function($scope, $ionicSideMenuDelegate, $ionicScrollDelegate, $timeout) {
+  $scope.range = 5400;
+  
+  $scope.$watch(function () {
+    $scope.duration = moment.duration($scope.range*100, "milliseconds").format("mm:ss", { trim: false });
+  });
+  
 	$scope.submit = function() {
-	  if ($scope.text) {
-	    query = this.text;
-	    window.location.href = '#/timer?goal='+query+'';
+	  if ($scope.range) {
+	    range = this.range;
+	    window.location.href = '#/timer?goal='+range+'';
 	  }
 	}
 })
@@ -13,7 +19,8 @@ angular.module('controllers', [])
 // Timer Controller
 .controller('TimerCtrl', function($scope, $stateParams) {
   window.addEventListener('shake', shakeEventDidOccur, false);
-	$scope.result = parseFloat($stateParams.goal);
+	$scope.duration = moment.duration(parseFloat($stateParams.goal*100), "milliseconds").format("mm:ss", { trim: false });
+	
 	$scope.class = "pause";
   
   // Click that button

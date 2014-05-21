@@ -37,7 +37,9 @@ angular.module('timer', [])
         $scope.timeoutId = null;
         $scope.countdown = $scope.countdownattr && parseInt($scope.countdownattr, 10) >= 0 ? parseInt($scope.countdownattr, 10) : undefined;
         $scope.isRunning = false;
-        $scope.result = parseFloat($stateParams.goal*6);
+        
+        // Tyler Added 
+        $scope.result = parseFloat($stateParams.goal);
 
         $scope.$on('timer-start', function () {
           $scope.start();

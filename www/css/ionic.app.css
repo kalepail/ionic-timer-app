@@ -6431,12 +6431,6 @@ input, button {
   height: 42px !important;
   -webkit-appearance: none; }
 
-#goal input[type="text"] {
-  border: 1px solid lightgray;
-  padding: 0 1em;
-  box-sizing: border-box;
-  margin-bottom: 1em; }
-
 section:first-child {
   margin-top: 0; }
 section:last-child {
