@@ -19,8 +19,17 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"DisableShakeToEdit\"><param name=\"ios-package\" value=\"DisableShakeToEdit\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "CoreMotion.framework": []
                 }
             }
         }
@@ -33,6 +42,9 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "fr.spirotron.cordova.ios.disableshaketoedit": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         }
     },
