@@ -3,11 +3,12 @@
     <h1>Set A Goal ({{duration}})</h1>
     
     <form class="list" ng-submit="submit()">
-      <div class="item range">
-        <input type="range" ng-model="range" name="volume" min="3000" max="7200" />
+      <div class="range">
+        <input type="range" ng-model="range" name="volume" min="600" max="7200" />
       </div>
-      <div class="item">
-        <input type="submit" name="submit" value="Start" />
+      
+      <div class="start">
+        <input class="button button-balanced" type="submit" name="submit" value="Start" />
       </div>
     </form>
     

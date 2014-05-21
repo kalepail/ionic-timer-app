@@ -23,6 +23,18 @@
                         {
                             "xml": "<feature name=\"DisableShakeToEdit\"><param name=\"ios-package\" value=\"DisableShakeToEdit\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -45,6 +57,9 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "fr.spirotron.cordova.ios.disableshaketoedit": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "org.apache.cordova.statusbar": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         }
     },

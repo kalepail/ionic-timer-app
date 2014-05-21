@@ -1,4 +1,8 @@
 <ion-view title="Timer">
+  <ion-nav-buttons side="left">
+    <button class="button-icon icon ion-close" ng-click="goBack()"></button>
+  </ion-nav-buttons>
+  
   <ion-content class="has-header padding">
     <h1>Your Goal: {{duration}}</h1>
     
@@ -13,7 +17,7 @@
         </div>
       </timer>
       
-      <button ng-class="class" ng-click="timerToggle('clock-timer', $event.target)" type="button">Pause</button>
+      <button class="button" ng-class="class" ng-click="timerToggle('clock-timer', $event.target)" type="button">Pause</button>
     </section>
   </ion-content>
 </ion-view>

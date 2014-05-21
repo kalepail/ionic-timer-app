@@ -1,9 +1,31 @@
-input, button {
-  border-radius: 4px;
-  height: 42px !important;
-  -webkit-appearance: none;
+.pane {
+  background-color: $black;
+  border: none !important;
+}
+.bar {
+  background-color: transparent;
+  background-image: none;
+  border-bottom: 1px solid $dark;
+}
+h1, timer {
+  color: $white;
+}
+.icon {
+  color: $white;
 }
 
+input, .button {
+  height: 45px !important;
+  -webkit-appearance: none;
+  margin: 0 !important;
+}
+input[type="range"] {
+  padding: 0 !important;
+}
+div.range {
+  padding: 0;
+  margin-bottom: 1em;
+}
 section {
   &:first-child {
     margin-top: 0;
@@ -13,19 +35,18 @@ section {
   }
 }
 .progress-bar {
-  background: lightgray;
-  height: 42px;
+  background: $night;
+  height: 120px;
   margin-bottom: 1em;
-  border-radius: 4px;
+  border-radius: 2px;
   overflow: hidden;
 }
 .progress {
-  background: gray;
+  background: $dark;
   height: 100%;
   max-width: 100% !important;
 }
-button, input[type="submit"] {
-  border: none;
+.button, input[type="submit"] {
   color: $light;
   width: 100%;
   line-height: 2em;
