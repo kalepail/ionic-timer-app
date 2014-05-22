@@ -6,7 +6,7 @@ Once you've done that you'll need to open the directory in Terminal or whatever 
 
 After that it's time to branch into either development or testing. I've built out a pretty robust development environment but if all you're doing is installing the app through Xcode you can just run these next few commands in the Terminal and be done with it.
 
-NOTE: When you see a line break and a new $, that means press return (enter).
+*NOTE: When you see a line break and a new $, that means press return (enter).*
 
 **FIRST TIME INSTALLING THE APP**
 ```bash
@@ -19,6 +19,10 @@ $ ionic build ios
 ```bash
 $ ionic build ios
 ```
+
+Now you can close Terminal and go find the app directory. Drill into it and find the folder `platforms/ios/`. In there you will find the Xcode project. Click to open that in Xcode, where you can then move on to installing it on your phone.
+
+So that's it! Just remember that for every update you download you'll need to run the `$ionic build ios` command before reinstalling it to your phone.
 
 ## Setting up the Development Environment
 
