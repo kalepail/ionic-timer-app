@@ -7,8 +7,7 @@
     "gulp-sass": "^0.7.1",
     "gulp-concat": "^2.2.0",
     "gulp-minify-css": "^0.3.0",
-    "gulp-rename": "^1.2.0",
-    "moment-duration-format": "~1.2.1"
+    "gulp-rename": "^1.2.0"
   },
   "devDependencies": {
     "express": "~4.3.0",
