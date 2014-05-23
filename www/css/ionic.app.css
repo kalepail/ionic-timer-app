@@ -6430,8 +6430,12 @@ h1, timer {
 .icon {
   color: #FFF; }
 
+div.range {
+  padding: 0; }
+
 i {
-  cursor: pointer; }
+  cursor: pointer;
+  line-height: 45px; }
 
 input, .button {
   height: 45px !important;

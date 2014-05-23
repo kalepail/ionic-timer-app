@@ -13,8 +13,12 @@ h1, timer {
 .icon {
   color: $white;
 }
+div.range {
+  padding: 0;
+}
 i {
   cursor: pointer;
+  line-height: 45px;
 }
 
 input, .button {
