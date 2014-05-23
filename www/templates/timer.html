@@ -5,19 +5,18 @@
   
   <ion-content class="has-header padding">
     <h1>Your Goal: {{duration}}</h1>
+    <h3>
+      <timer interval="1000">{{minutes}} minutes, {{seconds}} seconds</timer>
+    </h3>
     
     <section id="clock-timer">
-      <h3>
-        <timer interval="1000">{{minutes}} minutes, {{seconds}} seconds</timer>
-      </h3>
-    
       <timer>
         <div class="progress-bar">
           <div class="progress" style="width: {{(millis/result)| number:2}}%;"></div> 
         </div>
       </timer>
       
-      <button class="button" ng-class="class" ng-click="timerToggle('clock-timer', $event.target)" type="button">Pause</button>
+      <button class="button" ng-click="timerToggle($event.target)" type="button">◼︎</button>
     </section>
   </ion-content>
 </ion-view>

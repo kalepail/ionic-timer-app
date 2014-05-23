@@ -1,4 +1,4 @@
-angular.module('navy-timer', ['ionic', 'timer', 'controllers'])
+angular.module('basic-timer', ['ionic', 'timer', 'controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

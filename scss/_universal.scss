@@ -32,6 +32,16 @@ section {
     margin-bottom: 0;
   }
 }
+input[type="submit"] {
+  background-color: $balanced;
+  color: $light;
+  width: 100%;
+  line-height: 2em;
+}
+
+#clock-timer {
+  position: relative;
+}
 .progress-bar {
   background: $night;
   height: 120px;
@@ -44,14 +54,14 @@ section {
   height: 100%;
   max-width: 100% !important;
 }
-.button, input[type="submit"] {
-  color: $light;
-  width: 100%;
-  line-height: 2em;
-}
-.pause {
-  background-color: $energized;
-}
-.resume, input[type="submit"] {
-  background-color: $balanced;
+button.button {
+  background: none !important;
+  color: $light !important;
+  position: absolute;
+  border: none;
+  font-size: 24px;
+  width: 60px !important;
+  height: 120px !important;
+  top: 0;
+  right: 0;
 }
