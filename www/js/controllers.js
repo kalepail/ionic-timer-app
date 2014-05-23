@@ -4,15 +4,20 @@ angular.module('controllers', [])
 .controller('GoalCtrl', function($scope, $ionicSideMenuDelegate, $ionicScrollDelegate) {
   $scope.range = 5400;
   
-  $scope.$watch(function () {
+  $scope.upOne = function() {
+    $scope.range = parseFloat($scope.range) + 10;
+  }
+  $scope.downOne = function() {
+    $scope.range = parseFloat($scope.range) - 10;
+  }
+  
+  $scope.$watch(function() {
     $scope.duration = moment.duration($scope.range*100, "milliseconds").format("mm:ss", { trim: false });
   });
   
 	$scope.submit = function() {
-	  if ($scope.range) {
-	    range = this.range;
-	    window.location.href = '#/timer?goal='+range+'';
-	  }
+    var range = $scope.range;
+    window.location.href = '#/timer?goal='+range+'';
 	}
 })
 

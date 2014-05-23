@@ -13,17 +13,15 @@ h1, timer {
 .icon {
   color: $white;
 }
+i {
+  cursor: pointer;
+}
 
 input, .button {
   height: 45px !important;
   -webkit-appearance: none;
-  margin: 0 !important;
-}
-input[type="range"] {
-  padding: 0 !important;
 }
 div.range {
-  padding: 0;
   margin-bottom: 1em;
 }
 section {
