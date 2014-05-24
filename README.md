@@ -4,7 +4,7 @@ Look over to the right of this screen. Click "Clone in Desktop" if you have the 
 
 Once you've done that you'll need to open the directory in Terminal or whatever your equivalent command line tool is. This can be accomplished by opening Terminal and then dragging the folder onto the Terminal icon or else just `cd` your way into it.
 
-After that it's time to branch into either development or testing. I've built out a pretty robust development environment but if all you're doing is installing the app through Xcode you can just run these next few commands in the Terminal and be done with it.
+After that it's time to branch into either development or testing. Ionic comes with a pretty robust development environment but if all you're doing is installing the app through Xcode you can just run these next few commands in the Terminal and be done with it.
 
 *NOTE: When you see a line break and a new $, that means press return (enter).*
 
@@ -42,9 +42,3 @@ $ gulp watch
 ```
 
 This just started a server at localhost:8000. Go ahead and navigate there. Now make some JS, Sass or HTML changes.. the browser will update automatically. Development built for kings!
-
-## Resource List
-
-Feel free to use this README for adding any project goals. This will be a living document during development.
-
-- [Ionic Docs](http://ionicframework.com/docs/)
