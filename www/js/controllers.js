@@ -28,8 +28,9 @@ angular.module('controllers', [])
 	
 	if (!eventAdded) {
 	  window.addEventListener('shake', shakeEventDidOccur, false);
-	  // works as application but breaks in development
-	  // window.plugins.insomnia.keepAwake();
+	  if (window.plugins !== undefined) {
+	    window.plugins.insomnia.keepAwake();
+	  }
 	  eventAdded = true;
 	}
   
