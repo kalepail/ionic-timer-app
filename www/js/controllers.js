@@ -28,18 +28,20 @@ angular.module('controllers', [])
 	
 	if (!eventAdded) {
 	  window.addEventListener('shake', shakeEventDidOccur, false);
-	  window.plugins.insomnia.keepAwake();
+	  if (window.plugins !== undefined) {
+	    window.plugins.insomnia.keepAwake();
+	  }
 	  eventAdded = true;
 	}
   
   // Shake 'dat booty/phone
   function shakeEventDidOccur() {
-    var items = document.getElementById('clock-timer').getElementsByTagName('timer');
+    var items = document.getElementsByTagName('timer');
     var btn = document.getElementsByClassName('button')[0];
     
-    if (btn.innerHTML === 'Pause') {
+    if (btn.innerHTML === '◼︎') {
       for (var i=0; i < items.length; i++) {
-        btn.innerHTML = 'Resume';
+        btn.innerHTML = '▶︎';
         items[i].stop();
       }
       $scope.$apply(function () {
@@ -48,7 +50,7 @@ angular.module('controllers', [])
     }
     else {
       for (var i=0; i < items.length; i++) {
-        btn.innerHTML = 'Pause';
+        btn.innerHTML = '◼︎';
         items[i].resume();
       }
       $scope.$apply(function () {
@@ -58,19 +60,19 @@ angular.module('controllers', [])
   }
   
   // Click that button
-  $scope.timerToggle = function(sectionId, btn) {  
-    var items = document.getElementById(sectionId).getElementsByTagName('timer');
+  $scope.timerToggle = function(btn) {  
+    var items = document.getElementsByTagName('timer');
     
-    if (btn.innerHTML === 'Pause') {
+    if (btn.innerHTML === '◼︎') {
       for (var i=0; i < items.length; i++) {
-        btn.innerHTML = 'Resume';
+        btn.innerHTML = '▶︎';
         items[i].stop();
       }
       $scope.class = "button-balanced";
     }
     else {
       for (var i=0; i < items.length; i++) {
-        btn.innerHTML = 'Pause';
+        btn.innerHTML = '◼︎';
         items[i].resume();
       }
       $scope.class = "button-energized";

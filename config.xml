@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ionicframework.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>PST Calculator</name>
+    <name>Basic Ionic Timer</name>
     <description>
-      A Workout Calculator for the Navy Seal/SWCC.
+      Basic Ionic timer with goals, insomnia and shake to start/stop.
     </description>
     <author email="tyler@tinyanvil.com" href="http://tinyanvil.com">
       Tiny Anvil, LLC

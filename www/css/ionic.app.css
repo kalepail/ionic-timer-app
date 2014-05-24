@@ -6430,8 +6430,18 @@ h1, timer {
 .icon {
   color: #FFF; }
 
-i {
-  cursor: pointer; }
+div.range {
+  padding: 0; }
+  div.range input {
+    margin: 0; }
+  div.range i {
+    cursor: pointer;
+    line-height: 45px;
+    min-width: 40px !important; }
+    div.range i:first-child {
+      text-align: left; }
+    div.range i:last-child {
+      text-align: right; }
 
 input, .button {
   height: 45px !important;
@@ -6445,6 +6455,15 @@ section:first-child {
 section:last-child {
   margin-bottom: 0; }
 
+input[type="submit"] {
+  background-color: #A0B28D;
+  color: #fff;
+  width: 100%;
+  line-height: 2em; }
+
+#clock-timer {
+  position: relative; }
+
 .progress-bar {
   background: #191919;
   height: 120px;
@@ -6457,13 +6476,13 @@ section:last-child {
   height: 100%;
   max-width: 100% !important; }
 
-.button, input[type="submit"] {
-  color: #fff;
-  width: 100%;
-  line-height: 2em; }
-
-.pause {
-  background-color: #f0b840; }
-
-.resume, input[type="submit"] {
-  background-color: #A0B28D; }
+button.button {
+  background: none !important;
+  color: #fff !important;
+  position: absolute;
+  border: none;
+  font-size: 24px;
+  width: 60px !important;
+  height: 120px !important;
+  top: 0;
+  right: 0; }
