@@ -6432,10 +6432,16 @@ h1, timer {
 
 div.range {
   padding: 0; }
-
-i {
-  cursor: pointer;
-  line-height: 45px; }
+  div.range input {
+    margin: 0; }
+  div.range i {
+    cursor: pointer;
+    line-height: 45px;
+    min-width: 40px !important; }
+    div.range i:first-child {
+      text-align: left; }
+    div.range i:last-child {
+      text-align: right; }
 
 input, .button {
   height: 45px !important;

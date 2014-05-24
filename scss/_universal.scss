@@ -15,10 +15,22 @@ h1, timer {
 }
 div.range {
   padding: 0;
-}
-i {
-  cursor: pointer;
-  line-height: 45px;
+  
+  input {
+    margin: 0;
+  }
+  i {
+    cursor: pointer;
+    line-height: 45px;
+    min-width: 40px !important;
+    
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
 }
 
 input, .button {
