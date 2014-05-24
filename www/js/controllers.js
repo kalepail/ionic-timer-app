@@ -2,19 +2,23 @@ angular.module('controllers', [])
 
 // Homepage Set-A-Goal Controller
 .controller('GoalCtrl', function($scope, $ionicSideMenuDelegate, $ionicScrollDelegate) {
+  // Prefill the slider to 9:30
   $scope.range = 5400;
   
+  // Add one second to the slider
   $scope.upOne = function() {
     $scope.range = parseFloat($scope.range) + 10;
   }
+  // Remove one second from the slider
   $scope.downOne = function() {
     $scope.range = parseFloat($scope.range) - 10;
   }
-  
+  // Format the time to something readable
   $scope.$watch(function() {
     $scope.duration = moment.duration($scope.range*100, "milliseconds").format("mm:ss", { trim: false });
   });
   
+  // Alright, let's get this timer timing!
 	$scope.submit = function() {
     var range = $scope.range;
     window.location.href = '#/timer?goal='+range+'';
@@ -23,9 +27,10 @@ angular.module('controllers', [])
 
 // Timer Controller
 .controller('TimerCtrl', function($scope, $stateParams) {
+  // Some presents and variables
 	$scope.duration = moment.duration(parseFloat($stateParams.goal*100), "milliseconds").format("mm:ss", { trim: false });
-	$scope.class = "button-energized";
 	
+	// Look out for the shakes and insomnia
 	if (!eventAdded) {
 	  window.addEventListener('shake', shakeEventDidOccur, false);
 	  if (window.plugins !== undefined) {
@@ -44,18 +49,12 @@ angular.module('controllers', [])
         btn.innerHTML = '▶︎';
         items[i].stop();
       }
-      $scope.$apply(function () {
-        $scope.class = 'button-balanced';
-      });
     }
     else {
       for (var i=0; i < items.length; i++) {
         btn.innerHTML = '◼︎';
         items[i].resume();
       }
-      $scope.$apply(function () {
-        $scope.class = 'button-energized';
-      });
     }
   }
   
@@ -68,17 +67,16 @@ angular.module('controllers', [])
         btn.innerHTML = '▶︎';
         items[i].stop();
       }
-      $scope.class = "button-balanced";
     }
     else {
       for (var i=0; i < items.length; i++) {
         btn.innerHTML = '◼︎';
         items[i].resume();
       }
-      $scope.class = "button-energized";
     }
   }
   
+  // Go home Buddy, I work(out) alone.
   $scope.goBack = function() {
     window.location.href = '#/app';
   }

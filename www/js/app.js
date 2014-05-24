@@ -16,7 +16,7 @@ angular.module('basic-timer', ['ionic', 'timer', 'controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    // All the pages and states of the app
+    // The app pages
     .state('app', {
       url: '/app',
       views: {
